@@ -49,7 +49,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_DTBTOOL_ARGS := -2
 TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_CONFIG := cyanogenmod_bacon_defconfig
+TARGET_KERNEL_CONFIG := radioactive_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8974
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
@@ -67,7 +67,6 @@ AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := false
-USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
 BLUETOOTH_HCI_USE_MCT := true
@@ -97,7 +96,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Encryption
-TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_HW_DISK_ENCRYPTION := true
 
 # Flags for modem (we still have an old modem)
 BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
